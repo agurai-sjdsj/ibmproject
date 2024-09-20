@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#clock">Clock</a>
+            <a href="#timer">Timer</a>
+            <a href="#alarm">Alarm</a>
+            <button id="theme-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="clock">
+            <h2>Current Time</h2>
+            <div id="time-display"></div>
+        </section>
+
+        <section id="timer">
+            <h2>Timer</h2>
+            <div>
+                <input type="number" id="timer-minutes" placeholder="Minutes">
+                <input type="number" id="timer-seconds" placeholder="Seconds">
+                <button id="start-timer">Start Timer</button>
+            </div>
+            <div id="timer-display"></div>
+        </section>
+
+        <section id="alarm">
+            <h2>Set Alarm</h2>
+            <div>
+                <input type="time" id="alarm-time">
+                <select id="alarm-tone">
+                    <option value="tone_1.mp3">Tone 1</option>
+                    <option value="tone_2.mp3">Tone 2</option>
+                    <option value="tone_3.mp3">Tone 3</option>
+                    <option value="tone_4.mp3">Tone 4</option>
+                    <option value="tone_5.mp3">Tone 5</option>
+                </select>
+                <button id="set-alarm">Set Alarm</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

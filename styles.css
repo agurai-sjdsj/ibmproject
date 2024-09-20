@@ -1,0 +1,180 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Theme Variables */
+:root {
+    --bg-color: #101010;
+    --text-color: #e0e0e0;
+    --accent-color: #00bcd4;
+    --accent-hover: #0097a7;
+    --border-color: #3d3d3d;
+}
+
+body.dark-theme {
+    --bg-color: #2b2b2b;
+    --text-color: #e0e0e0;
+    --accent-color: #ff5722;
+    --accent-hover: #e64a19;
+    --border-color: #505050;
+}
+
+/* Header & Navbar */
+header {
+    background-color: var(--accent-color);
+    padding: 10px 20px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: var(--accent-hover);
+}
+
+#theme-toggle {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: white;
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+section {
+    margin-bottom: 30px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    color: var(--accent-color);
+}
+
+input[type="number"],
+input[type="time"],
+select {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 2px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus,
+input[type="time"]:focus,
+select:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--accent-hover);
+}
+
+#time-display, #timer-display {
+    font-size: 36px;
+    margin-top: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    input[type="number"],
+    input[type="time"],
+    select {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #time-display, #timer-display {
+        font-size: 28px;
+    }
+}
